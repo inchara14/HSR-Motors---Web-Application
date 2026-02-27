@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DriveFlow Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#1173d4",
+                "background-light": "#f6f7f8",
+                "background-dark": "#101922",
+                "sidebar-dark": "#111a22",
+                "card-dark": "#1a2633",
+                "border-dark": "#324d67",
+                "text-dark-primary": "#ffffff",
+                "text-dark-secondary": "#92adc9",
+                "text-light-primary": "#101922",
+                "text-light-secondary": "#6b7280",
+              },
+              fontFamily: {
+                "display": ["Inter", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex min-h-screen">
+<aside class="w-64 bg-sidebar-dark flex flex-col p-4 text-text-dark-primary fixed h-full">
+<div class="flex items-center gap-3 mb-8">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("../DriveFlow Logo.png");'></div>
+<h1 class="text-xl font-bold">DriveFlow</h1>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary/20 text-primary" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/20 hover:text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0">leaderboard</span>
+<span class="font-medium">Leads</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/20 hover:text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0">checklist</span>
+<span class="font-medium">Follow-ups</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/20 hover:text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0">group</span>
+<span class="font-medium">Users</span>
+</a>
+</nav>
+<div class="mt-auto">
+<button class="w-full flex items-center justify-center gap-2 py-3 bg-primary text-white rounded-lg font-medium">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0">logout</span>
+                    Logout
+                </button>
+</div>
+</aside>
+<main class="ml-64 flex-1 p-8">
+<div class="flex justify-between items-center mb-6">
+<h1 class="text-4xl font-black leading-tight tracking-[-0.033em] text-text-light-primary dark:text-text-dark-primary">Dashboard</h1>
+<div class="flex items-center gap-4">
+<div class="relative">
+<input class="bg-card-dark border border-border-dark text-text-dark-secondary rounded-lg pl-10 pr-4 py-2 w-72" placeholder="Jan 1, 2023 - Dec 31, 2023" type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-dark-secondary" style="font-variation-settings: 'FILL' 0">calendar_today</span>
+</div>
+<button class="bg-primary text-white px-4 py-2 rounded-lg font-medium flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0">download</span>
+                        Export Data
+                    </button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+<div class="bg-card-dark border border-border-dark p-6 rounded-lg flex flex-col gap-2">
+<p class="text-text-dark-secondary text-base font-medium">Total Leads</p>
+<p class="text-text-dark-primary text-4xl font-bold">1,234</p>
+<p class="text-green-500 text-base font-medium">+12.5%</p>
+</div>
+<div class="bg-card-dark border border-border-dark p-6 rounded-lg flex flex-col gap-2">
+<p class="text-text-dark-secondary text-base font-medium">Conversion Rate</p>
+<p class="text-text-dark-primary text-4xl font-bold">6.7%</p>
+<p class="text-green-500 text-base font-medium">+2.1%</p>
+</div>
+<div class="bg-card-dark border border-border-dark p-6 rounded-lg flex flex-col gap-2">
+<p class="text-text-dark-secondary text-base font-medium">New Customers</p>
+<p class="text-text-dark-primary text-4xl font-bold">89</p>
+<p class="text-green-500 text-base font-medium">+15.3%</p>
+</div>
+<div class="bg-card-dark border border-border-dark p-6 rounded-lg flex flex-col gap-2">
+<p class="text-text-dark-secondary text-base font-medium">Pending Follow-ups</p>
+<p class="text-text-dark-primary text-4xl font-bold">24</p>
+<p class="text-red-500 text-base font-medium">+5 since last week</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+<div class="lg:col-span-2 bg-card-dark border border-border-dark p-6 rounded-lg">
+<p class="text-text-dark-primary text-lg font-medium">Leads Generated This Year</p>
+<p class="text-text-dark-secondary text-sm">Jan - Dec 2023</p>
+<div class="h-80 mt-4">
+<svg class="w-full h-full" fill="none" viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="lineChartGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#1173d4" stop-opacity="0.4"></stop>
+<stop offset="100%" stop-color="#1173d4" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+<path d="M0 300 H 700" stroke="#324d67" stroke-width="1"></path>
+<path d="M0 225 H 700" stroke="#324d67" stroke-dasharray="4 4" stroke-width="1"></path>
+<path d="M0 150 H 700" stroke="#324d67" stroke-dasharray="4 4" stroke-width="1"></path>
+<path d="M0 75 H 700" stroke="#324d67" stroke-dasharray="4 4" stroke-width="1"></path>
+<path d="M0 0 H 700" stroke="#324d67" stroke-dasharray="4 4" stroke-width="1"></path>
+<path d="M 29.16 200 L 87.5 150 L 145.83 180 L 204.16 120 L 262.5 140 L 320.83 80 L 379.16 100 L 437.5 50 L 495.83 90 L 554.16 60 L 612.5 110 L 670.83 70" fill="url(#lineChartGradient)" stroke="#1173d4" stroke-width="3"></path>
+<g class="text-xs text-text-dark-secondary fill-current">
+<text text-anchor="middle" x="29.16" y="315">Jan</text>
+<text text-anchor="middle" x="87.5" y="315">Feb</text>
+<text text-anchor="middle" x="145.83" y="315">Mar</text>
+<text text-anchor="middle" x="204.16" y="315">Apr</text>
+<text text-anchor="middle" x="262.5" y="315">May</text>
+<text text-anchor="middle" x="320.83" y="315">Jun</text>
+<text text-anchor="middle" x="379.16" y="315">Jul</text>
+<text text-anchor="middle" x="437.5" y="315">Aug</text>
+<text text-anchor="middle" x="495.83" y="315">Sep</text>
+<text text-anchor="middle" x="554.16" y="315">Oct</text>
+<text text-anchor="middle" x="612.5" y="315">Nov</text>
+<text text-anchor="middle" x="670.83" y="315">Dec</text>
+</g>
+</svg>
+</div>
+</div>
+<div class="bg-card-dark border border-border-dark p-6 rounded-lg flex flex-col">
+<p class="text-text-dark-primary text-lg font-medium">Lead Sources by Quality</p>
+<p class="text-text-dark-secondary text-sm">Jan - Dec 2023</p>
+<div class="flex-1 flex items-center justify-center my-4">
+<svg height="200" viewBox="0 0 36 36" width="200">
+<circle cx="18" cy="18" fill="transparent" r="15.91549430918954" stroke="#4a5568" stroke-width="4"></circle>
+<circle cx="18" cy="18" fill="transparent" r="15.91549430918954" stroke="#1173d4" stroke-dasharray="45 100" stroke-dashoffset="25" stroke-width="4"></circle>
+<circle cx="18" cy="18" fill="transparent" r="15.91549430918954" stroke="#4299e1" stroke-dasharray="30 100" stroke-dashoffset="-20" stroke-width="4"></circle>
+<circle cx="18" cy="18" fill="transparent" r="15.91549430918954" stroke="#63b3ed" stroke-dasharray="15 100" stroke-dashoffset="-50" stroke-width="4"></circle>
+<circle cx="18" cy="18" fill="transparent" r="15.91549430918954" stroke="#90cdf4" stroke-dasharray="10 100" stroke-dashoffset="-65" stroke-width="4"></circle>
+</svg>
+</div>
+<div class="flex flex-col gap-2 text-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="h-3 w-3 rounded-full" style="background-color: #1173d4"></span>
+<span class="text-text-dark-secondary">Website</span>
+</div>
+<span class="font-medium text-text-dark-primary">45%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="h-3 w-3 rounded-full" style="background-color: #4299e1"></span>
+<span class="text-text-dark-secondary">Referral</span>
+</div>
+<span class="font-medium text-text-dark-primary">30%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="h-3 w-3 rounded-full" style="background-color: #63b3ed"></span>
+<span class="text-text-dark-secondary">Cold Call</span>
+</div>
+<span class="font-medium text-text-dark-primary">15%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="h-3 w-3 rounded-full" style="background-color: #90cdf4"></span>
+<span class="text-text-dark-secondary">Other</span>
+</div>
+<span class="font-medium text-text-dark-primary">10%</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-card-dark border border-border-dark p-6 rounded-lg">
+<h2 class="text-lg font-medium text-text-dark-primary mb-4">Top Performing Sales Reps</h2>
+<table class="w-full text-left">
+<thead>
+<tr class="border-b border-border-dark">
+<th class="py-3 px-4 text-sm font-semibold text-text-dark-secondary">Rank</th>
+<th class="py-3 px-4 text-sm font-semibold text-text-dark-secondary">Name</th>
+<th class="py-3 px-4 text-sm font-semibold text-text-dark-secondary">Leads Closed</th>
+<th class="py-3 px-4 text-sm font-semibold text-text-dark-secondary">Conversion Rate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-border-dark">
+<td class="py-3 px-4 text-text-dark-primary">1</td>
+<td class="py-3 px-4 text-text-dark-primary">John Doe</td>
+<td class="py-3 px-4 text-text-dark-primary">125</td>
+<td class="py-3 px-4 text-text-dark-primary">12.5%</td>
+</tr>
+<tr class="border-b border-border-dark">
+<td class="py-3 px-4 text-text-dark-primary">2</td>
+<td class="py-3 px-4 text-text-dark-primary">Jane Smith</td>
+<td class="py-3 px-4 text-text-dark-primary">110</td>
+<td class="py-3 px-4 text-text-dark-primary">11.2%</td>
+</tr>
+<tr>
+<td class="py-3 px-4 text-text-dark-primary">3</td>
+<td class="py-3 px-4 text-text-dark-primary">Sam Wilson</td>
+<td class="py-3 px-4 text-text-dark-primary">98</td>
+<td class="py-3 px-4 text-text-dark-primary">9.8%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</main>
+</div>
+
+</body></html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DriveFlow CRM - Lead Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1173d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col">
+<div class="flex h-full grow flex-row">
+<div class="flex h-full min-h-[700px] flex-col justify-between bg-[#111a22] p-4 w-64">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 px-3 py-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("../DriveFlow Logo.png");'></div>
+<div class="flex flex-col">
+<h1 class="text-white text-base font-medium leading-normal">DriveFlow</h1>
+<p class="text-[#92adc9] text-sm font-normal leading-normal">CRM</p>
+</div>
+</div>
+<div class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2 text-white rounded-lg hover:bg-[#233648]" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-[#233648] text-white" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">workspace_premium</span>
+<p class="text-sm font-medium leading-normal">Leads</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-white rounded-lg hover:bg-[#233648]" href="#">
+<span class="material-symbols-outlined">task_alt</span>
+<p class="text-sm font-medium leading-normal">Follow-ups</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-white rounded-lg hover:bg-[#233648]" href="#">
+<span class="material-symbols-outlined">group</span>
+<p class="text-sm font-medium leading-normal">Users</p>
+</a>
+</div>
+</div>
+</div>
+<div class="flex-1 flex flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#233648] px-10 py-3 bg-[#111a22]">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-white">
+<span class="material-symbols-outlined text-2xl text-primary">directions_car</span>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">HSR Motors</h2>
+</div>
+<label class="flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-[#92adc9] flex border-none bg-[#233648] items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#233648] focus:border-none h-full placeholder:text-[#92adc9] px-4 pl-2 text-base font-normal leading-normal" placeholder="Search" value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-1 justify-end gap-4">
+<div class="flex gap-2">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#233648] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#233648] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBaXbA0v5f4ayqNcB5mu5_KdB9MCFQ6iNICPvNVE31JuFQkIMlMtjX5GsKk5nN5zlz3vPMhw0vKud0RWHjd54BwaYAdP5-rwu2Fj-zjxsWRPXXR8ZhpDn58UWW6N1ukDkQ8Xcgz50BP-5ZTXVBQz5lWUpCnUkjBfYaxFKmLmxIH8KBbE2-3GMAdmsQ0bvlOdn2hitrloT7gaJgmISsDi_NH09UPplxRKhx76qbN7d3DHk3ecnj189o8_Ch-Le_a9Ie9MQh6yPbT5gMo");'></div>
+</div>
+</header>
+<main class="flex-1 p-6 md:p-8 lg:p-10 bg-[#101922]">
+<div class="flex flex-wrap justify-between gap-3 items-center">
+<div class="flex min-w-72 flex-col gap-1">
+<p class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">John Appleseed</p>
+<p class="text-[#92adc9] text-base font-normal leading-normal">john.appleseed@example.com, from 'Website Form'</p>
+</div>
+<div class="flex h-10 items-center justify-center rounded-lg bg-[#233648] p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-3 has-[:checked]:bg-[#1173d4] has-[:checked]:shadow-[0_0_4px_rgba(17,115,212,0.5)] has-[:checked]:text-white text-[#92adc9] text-sm font-medium leading-normal">
+<span class="truncate">New</span>
+<input checked="" class="invisible w-0" name="status-pipeline" type="radio" value="New"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-3 has-[:checked]:bg-[#1173d4] has-[:checked]:shadow-[0_0_4px_rgba(17,115,212,0.5)] has-[:checked]:text-white text-[#92adc9] text-sm font-medium leading-normal">
+<span class="truncate">Contacted</span>
+<input class="invisible w-0" name="status-pipeline" type="radio" value="Contacted"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-3 has-[:checked]:bg-[#1173d4] has-[:checked]:shadow-[0_0_4px_rgba(17,115,212,0.5)] has-[:checked]:text-white text-[#92adc9] text-sm font-medium leading-normal">
+<span class="truncate">Qualified</span>
+<input class="invisible w-0" name="status-pipeline" type="radio" value="Qualified"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-3 has-[:checked]:bg-[#1173d4] has-[:checked]:shadow-[0_0_4px_rgba(17,115,212,0.5)] has-[:checked]:text-white text-[#92adc9] text-sm font-medium leading-normal">
+<span class="truncate">Converted/Lost</span>
+<input class="invisible w-0" name="status-pipeline" type="radio" value="Converted/Lost"/>
+</label>
+</div>
+</div>
+<div class="mt-6">
+<div class="flex border-b border-[#324d67] gap-8">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-white pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Activity</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#92adc9] pb-[13px] pt-4 hover:border-b-[#233648]" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Notes</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#92adc9] pb-[13px] pt-4 hover:border-b-[#233648]" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Follow-ups</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#92adc9] pb-[13px] pt-4 hover:border-b-[#233648]" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Documents</p>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
+<div class="lg:col-span-2 flex flex-col gap-6">
+<div class="bg-[#111a22] rounded-lg p-6">
+<h3 class="text-white text-lg font-semibold mb-4">Activity Feed</h3>
+<div class="space-y-4">
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary">email</span>
+<div class="w-px h-full bg-[#233648]"></div>
+</div>
+<div>
+<p class="text-white font-medium">Email sent</p>
+<p class="text-[#92adc9] text-sm">Sent "Follow-up on your recent inquiry" to John.</p>
+<p class="text-[#92adc9] text-xs mt-1">2 days ago</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary">call</span>
+<div class="w-px h-full bg-[#233648]"></div>
+</div>
+<div>
+<p class="text-white font-medium">Call logged</p>
+<p class="text-[#92adc9] text-sm">Had a 15-minute call to discuss vehicle options.</p>
+<p class="text-[#92adc9] text-xs mt-1">3 days ago</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary">person_add</span>
+</div>
+<div>
+<p class="text-white font-medium">Lead Created</p>
+<p class="text-[#92adc9] text-sm">New lead from 'Website Form'.</p>
+<p class="text-[#92adc9] text-xs mt-1">5 days ago</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-[#111a22] rounded-lg p-6">
+<h3 class="text-white text-lg font-semibold mb-4">Add a Note</h3>
+<textarea class="form-textarea w-full rounded-lg bg-[#233648] border-none text-white placeholder:text-[#92adc9] focus:ring-primary focus:ring-2" placeholder="Type your note here..." rows="4"></textarea>
+<div class="flex justify-end mt-4">
+<button class="flex items-center justify-center rounded-lg h-10 bg-primary text-white gap-2 text-sm font-bold px-4">
+                                        Add Note
+                                    </button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<div class="bg-[#111a22] rounded-lg p-6">
+<h3 class="text-white text-lg font-semibold mb-4">Schedule Follow-up</h3>
+<div class="space-y-4">
+<div>
+<label class="text-sm font-medium text-white">Date</label>
+<input class="form-input mt-1 w-full rounded-lg bg-[#233648] border-none text-white" style="color-scheme: dark;" type="date"/>
+</div>
+<div>
+<label class="text-sm font-medium text-white">Time</label>
+<input class="form-input mt-1 w-full rounded-lg bg-[#233648] border-none text-white" style="color-scheme: dark;" type="time"/>
+</div>
+<div class="flex items-center">
+<input class="form-checkbox rounded bg-[#233648] border-none text-primary focus:ring-primary" id="reminder" type="checkbox"/>
+<label class="ml-2 text-sm text-white" for="reminder">Set a reminder</label>
+</div>
+<button class="w-full flex items-center justify-center rounded-lg h-10 bg-primary text-white gap-2 text-sm font-bold">
+                                        Schedule
+                                    </button>
+</div>
+</div>
+<div class="bg-[#111a22] rounded-lg p-6">
+<h3 class="text-white text-lg font-semibold mb-4">Assign To</h3>
+<select class="form-select w-full rounded-lg bg-[#233648] border-none text-white focus:ring-primary focus:ring-2">
+<option>Jane Doe</option>
+<option>Peter Jones</option>
+<option>Mary Smith</option>
+</select>
+</div>
+<div class="bg-[#111a22] rounded-lg p-6">
+<h3 class="text-white text-lg font-semibold mb-4">Documents</h3>
+<div class="flex items-center justify-center w-full">
+<label class="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-[#233648] rounded-lg cursor-pointer bg-[#101922] hover:bg-[#233648]">
+<div class="flex flex-col items-center justify-center pt-5 pb-6">
+<span class="material-symbols-outlined text-[#92adc9]">cloud_upload</span>
+<p class="mb-2 text-sm text-[#92adc9]"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+</div>
+<input class="hidden" type="file"/>
+</label>
+</div>
+<div class="mt-4 space-y-2">
+<div class="flex items-center justify-between bg-[#233648] p-2 rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-white">description</span>
+<p class="text-sm text-white">quote_v1.pdf</p>
+</div>
+<button class="text-[#92adc9] hover:text-white">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-[#111a22] rounded-lg p-6">
+<h3 class="text-white text-lg font-semibold mb-4">Automation</h3>
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<label class="text-sm text-white" for="inactivity_reminder">Inactivity Reminders</label>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="inactivity_reminder" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-[#233648] peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between">
+<label class="text-sm text-white" for="duplicate_detection">Duplicate Detection</label>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" id="duplicate_detection" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-[#233648] peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</div>
+</body></html>

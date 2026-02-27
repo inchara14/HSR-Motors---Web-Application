@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lead Details - DriveFLow CRM</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1173d4",
+                        "background-light": "#f8f9fa",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex h-screen">
+<aside class="w-64 flex-shrink-0 bg-[#111a22] p-4 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-8">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("../DriveFlow Logo.png");'></div>
+<h1 class="text-white text-lg font-medium">DriveFlow</h1>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 text-white hover:bg-[#233648] rounded-lg" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-white bg-[#233648] rounded-lg" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<p class="text-sm font-medium">Leads</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-white hover:bg-[#233648] rounded-lg" href="#">
+<span class="material-symbols-outlined">task_alt</span>
+<p class="text-sm font-medium">Follow-ups</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-white hover:bg-[#233648] rounded-lg" href="#">
+<span class="material-symbols-outlined">group</span>
+<p class="text-sm font-medium">Users</p>
+</a>
+</nav>
+</div>
+<div>
+<a class="flex items-center gap-3 px-3 py-2 text-white hover:bg-[#233648] rounded-lg" href="#">
+<span class="material-symbols-outlined">logout</span>
+<p class="text-sm font-medium">Logout</p>
+</a>
+</div>
+</aside>
+<main class="flex-1 overflow-y-auto">
+<div class="p-8">
+<div class="flex flex-wrap justify-between items-center gap-3 mb-8">
+<div>
+<a class="text-primary text-sm font-medium leading-normal flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-base">arrow_back_ios</span>
+                            Back to Leads
+                        </a>
+<p class="text-gray-900 dark:text-white text-4xl font-black tracking-[-0.033em] mt-1">John Doe</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-1 flex flex-col gap-8">
+<div class="bg-white dark:bg-[#1c2a38] rounded-xl shadow-md p-6">
+<div class="flex flex-col items-center text-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-32 mb-4" data-alt="Profile picture of John Doe" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDHwqHniYELK5O3kg_8TUSfLldDLdylcCC-MeF52v6wuLInQ_VwMt7enNRKuAHKQvOivGXPuLUrIshaMM7JxFqCUfgwzZxYmlKk1oLoNY_hfJdR0erm9RIgvRA16EewKvyQtkoPR5_9HAFI5BM-H6nVVuh86_jnGwDdleA8N24Xu-YdJDHMl6VjxuFJjZTSBda7pHSYYVCnmYfqML7g6aa9G0_wawyMx1I1sMLStPWuvjVXbuQUe63mjobTJWZuu4jO0b6_85jA57vf");'></div>
+<p class="text-gray-900 dark:text-white text-[22px] font-bold tracking-[-0.015em]">John Doe</p>
+<p class="text-gray-500 dark:text-[#92adc9] text-sm">+1-234-567-890 | john.doe@example.com</p>
+<p class="text-gray-500 dark:text-[#92adc9] text-sm">HSR Motors</p>
+<div class="flex w-full gap-3 mt-6">
+<button class="flex-1 flex items-center justify-center gap-2 h-10 px-4 rounded-lg bg-[#233648] text-white text-sm font-bold tracking-[0.015em]">
+<span class="material-symbols-outlined text-base">call</span>
+<span class="truncate">Call</span>
+</button>
+<button class="flex-1 flex items-center justify-center gap-2 h-10 px-4 rounded-lg bg-primary text-white text-sm font-bold tracking-[0.015em]">
+<span class="material-symbols-outlined text-base">email</span>
+<span class="truncate">Email</span>
+</button>
+<button class="flex-1 flex items-center justify-center gap-2 h-10 px-4 rounded-lg bg-[#25D366] text-white text-sm font-bold tracking-[0.015em]">
+<i class="fab fa-whatsapp text-lg"></i>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-[#1c2a38] rounded-xl shadow-md p-6">
+<div class="grid grid-cols-1">
+<div class="grid grid-cols-[35%_1fr] py-4 border-b border-gray-200 dark:border-t-[#324d67]">
+<p class="text-gray-500 dark:text-[#92adc9] text-sm font-medium">Car Model Interest</p>
+<p class="text-gray-900 dark:text-white text-sm">Sedan X</p>
+</div>
+<div class="grid grid-cols-[35%_1fr] py-4 border-b border-gray-200 dark:border-t-[#324d67]">
+<p class="text-gray-500 dark:text-[#92adc9] text-sm font-medium">Lead Source</p>
+<p class="text-gray-900 dark:text-white text-sm">Website Form</p>
+</div>
+<div class="grid grid-cols-[35%_1fr] py-4">
+<p class="text-gray-500 dark:text-[#92adc9] text-sm font-medium">Lead Status</p>
+<p class="text-primary text-sm font-medium px-2 py-0.5 bg-blue-100 dark:bg-primary/20 rounded-full inline-block w-fit">Contacted</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-2">
+<div class="bg-white dark:bg-[#1c2a38] rounded-xl shadow-md p-6">
+<h2 class="text-gray-900 dark:text-white text-[22px] font-bold tracking-[-0.015em] mb-6">Activity Timeline</h2>
+<div class="mb-8">
+<textarea class="w-full p-3 bg-gray-100 dark:bg-[#233648] text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-primary border-transparent focus:border-transparent" placeholder="Add a note or log an activity..." rows="3"></textarea>
+<div class="flex justify-end gap-2 mt-3">
+<button class="flex items-center justify-center h-10 px-4 rounded-lg bg-gray-200 dark:bg-[#233648] text-gray-800 dark:text-white text-sm font-bold">
+<span class="material-symbols-outlined text-xl">attach_file</span>
+</button>
+<button class="h-10 px-6 rounded-lg bg-primary text-white text-sm font-bold">Add Note</button>
+</div>
+</div>
+<div class="relative border-l-2 border-gray-200 dark:border-[#324d67] ml-3">
+<div class="mb-10 ml-8">
+<span class="absolute flex items-center justify-center w-6 h-6 bg-primary rounded-full -left-3 ring-8 ring-white dark:ring-[#1c2a38]">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-6" data-alt="User avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAPa5sa-sALYSpxnvLmArV4O_MBHeiKdA4vsNGWxrBUtk0enRUlB2iiotQqQSwKExcT-wZAVJIgzoDNGOkrOUokqxTkJSgIGYz-D5SSeUukC3Fwda16Sl5JbIg1vrBKY9tr3tYDtsjgd8giW_G9NVA1qzY5GzBw6v5Bnidj8scm8v7Fzg7E6Eu_U4kDWhCtcf4zOU-sS8jUd-dN66kt6El5H9JHfb61nYhvjUka9mYzCY3Ej-smvMBGpEIiAgg8AfLv7TsiJz5wj8cJ");'></div>
+</span>
+<div class="bg-gray-100 dark:bg-[#233648] p-4 rounded-lg">
+<div class="flex items-center justify-between mb-2">
+<p class="text-sm font-semibold text-gray-900 dark:text-white">Sarah Miller</p>
+<time class="text-xs font-normal text-gray-500 dark:text-[#92adc9]">February 18th, 2024</time>
+</div>
+<p class="text-sm text-gray-700 dark:text-gray-300">Sent an email with the new brochure for Sedan X.</p>
+</div>
+</div>
+<div class="mb-10 ml-8">
+<span class="absolute flex items-center justify-center w-6 h-6 bg-primary rounded-full -left-3 ring-8 ring-white dark:ring-[#1c2a38]">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-6" data-alt="User avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGwnzBiqq1sdKJ314_Pe4wjIIc9MbRPJa8QX9MOX29XPy1WsGnZkhxmfVDuC_Y5HLD-qmYNYKeQlaTzkFHa_6N5SO34HM4hDcwOk2_JAfKxor2N_Bw3qbF_SMEmFxeOTINGkcWMBvAFqYbxbHvCUaHr59v83nUzmkrQECRyA_ZVjhAsD1SICTQDHnJCWUnRwkyVcdzbCb-OoC8jqn6iBbHJg8ORPB8zjLlS-wr-PPrgHxO6IDxeOvwBKSpFM7ALHygi-mzupU2fWsw");'></div>
+</span>
+<div class="bg-gray-100 dark:bg-[#233648] p-4 rounded-lg">
+<div class="flex items-center justify-between mb-2">
+<p class="text-sm font-semibold text-gray-900 dark:text-white">Sarah Miller</p>
+<time class="text-xs font-normal text-gray-500 dark:text-[#92adc9]">February 17th, 2024</time>
+</div>
+<p class="text-sm text-gray-700 dark:text-gray-300">Had a follow-up call. John is very interested and will discuss with his spouse.</p>
+</div>
+</div>
+<div class="mb-10 ml-8">
+<span class="absolute flex items-center justify-center w-6 h-6 bg-primary rounded-full -left-3 ring-8 ring-white dark:ring-[#1c2a38]">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-6" data-alt="User avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAqFhXbYeRBWmxY3kxguobZ2H6BCmBAm80_pFlXAIVF7VjqA-H14sHVkHzdzqvNiiYtfxDZTvoXq64pBOfDCqWU11vKWIWnxPyHPCiYhV3B_1h3A4d1oqzeEqnxGN7AfQu6ajv5-0ikK8a9ZG2vPyJLhbOJSOQGiahtdHpIAD6RnaFICXxoU4-5LN0W2DivW37lmGO07oq1Ox2AGo71fSs0erC6CPVDBWcsbyuaMsLc4Ya3DY7jLAm0FEhMK07LwR8Yq1ecV9h-Y5ug");'></div>
+</span>
+<div class="bg-gray-100 dark:bg-[#233648] p-4 rounded-lg">
+<div class="flex items-center justify-between mb-2">
+<p class="text-sm font-semibold text-gray-900 dark:text-white">Mark Chen</p>
+<time class="text-xs font-normal text-gray-500 dark:text-[#92adc9]">February 15th, 2024</time>
+</div>
+<p class="text-sm text-gray-700 dark:text-gray-300">Logged a note from the auto show event. John filled out an interest form.</p>
+<div class="mt-4 flex gap-2">
+<img class="w-24 h-auto rounded-md cursor-pointer hover:opacity-80 transition-opacity" data-alt="Scanned interest form" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl76iu22IqJh5KFTdLQKct9UNJvGPPvYvfg2dK_rew81u5NvCxDvxPtUYeTjJT8KTbpCP7QC_PnP59Wx8f-n9dbLatJLE6xYPuzRzeHhOdg5oHpUhpuUkmjM9HX82uEMp-sOc2fQIkEj8R4W3PLxGYmu4M8PUfEQypZGjLFQtWjdrm79iZtOUu98hXSyYFwJbU_8Aeh4G-tfYR_dV9eRh_EcMwCxO5VKGQCDnl6ZiSzjdZSgtSHmURw_wVB3843tkpeb4x-z3tQqwm"/>
+<img class="w-24 h-auto rounded-md cursor-pointer hover:opacity-80 transition-opacity" data-alt="Photo of John Doe at auto show" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCox3MioQJG-0mL1b-WopJmyGeCi5dtQw6VvZQuWSBFlXoARnjBbThCqSDkkUl-OlrS8PhWjJTNhsETtVEYE8YOp_JbVOCJnZhLpfK6AfbyJM-MmYZz-7s9K-VQvcWwLleszieBNbA-0j8NLJbGreuyUDawy8K_WLLX1VtdWMnjtKDoRchvwDvaMvZeNI4dvpNOD-31H28nErSG4DjHpqCQwnDN6Xc2Djzok04h_07mv5Vi8RkC91orr89S7Iz655pCRvEQWMMrBGZi"/>
+</div>
+</div>
+</div>
+<div class="ml-8">
+<span class="absolute flex items-center justify-center w-6 h-6 bg-primary rounded-full -left-3 ring-8 ring-white dark:ring-[#1c2a38]">
+<span class="material-symbols-outlined text-white text-base">robot_2</span>
+</span>
+<div class="bg-gray-100 dark:bg-[#233648] p-4 rounded-lg">
+<div class="flex items-center justify-between mb-2">
+<p class="text-sm font-semibold text-gray-900 dark:text-white">System</p>
+<time class="text-xs font-normal text-gray-500 dark:text-[#92adc9]">February 15th, 2024</time>
+</div>
+<p class="text-sm text-gray-700 dark:text-gray-300">New lead created from Website Form.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
