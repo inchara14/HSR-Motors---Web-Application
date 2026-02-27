@@ -1,19 +1,19 @@
-# 🚗 DriveFlow – Lead Management System
+# DriveFlow – Lead Management System
 
 DriveFlow is a desktop web application designed for HSR Motors to manage and track car purchase leads efficiently.
 
-## 🖥 Screens
+## Screens
 - Lead Listing  
 - Lead Details  
 - Lead Management  
 - Dashboard  
 
-## 🎯 Purpose
+## Purpose
 - Help Sales Team track and update leads  
 - Give Business Manager quick performance insights  
 - Replace spreadsheet-based lead tracking  
 
-## ✨ Features
+## Features
 - Lead status tracking  
 - Activity timeline  
 - Quick call/email actions  
